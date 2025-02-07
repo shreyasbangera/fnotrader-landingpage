@@ -4,15 +4,15 @@ const Testimonials = () => {
   return (
     <section id="testimonials" className="bg-blue-50 py-12 lg:py-20">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="text-center mb-16 animate__animated animate__fadeIn">
-        <h2 className="text-3xl lg:text-4xl font-semibold text-gray-900 mb-4">Loved by traders from across India</h2>
+      <div className="text-center lg:mb-16 mb-12">
+        <h2 className="text-2xl lg:text-4xl font-semibold text-gray-900 mb-4">Loved by traders from across India</h2>
         <p className="text-base lg:text-lg text-gray-600">Thousand of traders trust FNOTrader on a daily basis</p>
       </div>
 
       <div className="relative">
         <div className="swiper-container">
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-2xl p-8 shadow-lg animate__animated animate__fadeInLeft">
+            <div className="bg-white rounded-2xl p-8 border border-neutral-100 shadow-md">
               <div className="flex items-center mb-6">
                 <div className="flex-1">
                   <p className="text-gray-900 font-semibold">Srikanth</p>
@@ -38,7 +38,7 @@ const Testimonials = () => {
               <p className="text-gray-600 leading-relaxed">FNOTrader.com is an exceptional platform for Futures and Options analysis. Thanks to their real-time Options analysis, my profitability has doubled. Key features like OI Action and Option chain offer timely and accurate information, aiding in making informed trading decisions.</p>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 shadow-lg animate__animated animate__fadeInRight">
+            <div className="bg-white rounded-2xl p-8 border border-neutral-100 shadow-md">
               <div className="flex items-center mb-6">
                 <div className="flex-1">
                   <p className="text-gray-900 font-semibold">Vinayak</p>

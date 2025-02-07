@@ -7,9 +7,9 @@ const Cta = () => {
     </div>
 
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-      <div className="bg-blue-600 rounded-3xl p-8 md:p-12 lg:p-16 shadow-2xl animate__animated animate__fadeIn">
+      <div className="bg-gradient-to-r from-blue-700 to-blue-600 rounded-3xl p-8 md:p-12 lg:p-16 shadow-2xl animate__animated animate__fadeIn">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
             Start Trading Like a Pro Today
           </h2>
           <p className="text-base lg:text-lg text-blue-100 mb-8">
@@ -22,7 +22,7 @@ const Cta = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
               </svg>
             </a>
-            <a href="#" className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-medium rounded-lg text-white bg-blue-700 hover:bg-blue-800 transition-colors duration-300">
+            <a href="#" className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium rounded-lg text-white bg-blue-800 hover:bg-blue-900 transition-colors duration-300">
               Schedule Demo
               <svg className="ml-2 -mr-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>

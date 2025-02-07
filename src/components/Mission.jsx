@@ -2,33 +2,33 @@ import React from 'react'
 
 const Mission = () => {
   return (
-    <section id="mission" className="py-12 lg:py-20 bg-white">
+    <section id="mission" className="py-12 lg:py-20 bg-gradient-to-r from-blue-700 to-blue-600">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="text-center mb-16">
-        <h2 className="text-3xl lg:text-4xl font-semibold mb-4">Our Mission</h2>
-        <p className="text-base lg:text-lg text-gray-600">Learn and Grow with FNOTrader</p>
+      <div className="text-center lg:mb-16 mb-12">
+        <h2 className="text-2xl text-white lg:text-4xl font-semibold mb-4">Our Mission</h2>
+        <p className="text-base lg:text-lg text-gray-100">Learn and Grow with FNOTrader</p>
       </div>
 
       <div className="grid md:grid-cols-2 gap-12 items-center">
-        <div className="prose prose-lg text-gray-600">
+        <div className="prose prose-lg text-gray-100">
           <p className="mb-6">At FNOTrader, our mission is to empower Futures and Options (F&amp;O) traders with unique market insights, unconventional charts, and other essential tools needed to navigate the markets with unparalleled confidence and success in the dynamic world of F&amp;O Trading.</p>
           <p>We simplify market analysis and trade execution through our trader-focused products, Discover and QuikTrade.</p>
           
           <div className="mt-8 space-y-4">
             <div className="flex items-center space-x-3">
-              <svg className="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
               </svg>
               <span>Real-time market analysis</span>
             </div>
             <div className="flex items-center space-x-3">
-              <svg className="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
               </svg>
               <span>Advanced trading tools</span>
             </div>
             <div className="flex items-center space-x-3">
-              <svg className="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
               </svg>
               <span>Educational resources</span>
@@ -36,8 +36,8 @@ const Mission = () => {
           </div>
         </div>
 
-        <div className="relative animate__animated animate__fadeInRight">
-          <div className="bg-white shadow-lg rounded-2xl p-8">
+        <div className="relative">
+          <div className="bg-white shadow-md border border-neutral-100 rounded-2xl p-8">
             <div className="space-y-6">
               <div className="flex items-center space-x-4">
                 <div className="bg-blue-600 rounded-full p-3">

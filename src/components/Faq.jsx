@@ -35,14 +35,14 @@ const Faq = () => {
   return (
     <section id="faq" className="bg-blue-50 py-12 lg:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 animate__animated animate__fadeIn">
-          <h2 className="text-3xl lg:text-4xl font-semibold text-gray-900 mb-4">Frequently Asked Questions</h2>
+        <div className="text-center lg:mb-16 mb-12">
+          <h2 className="text-2xl lg:text-4xl font-semibold text-gray-900 mb-4">Frequently asked questions</h2>
           <p className="text-base lg:text-lg text-gray-600">Got questions? We've got answers</p>
         </div>
 
         <div className="max-w-3xl mx-auto space-y-4">
           {faqData.map((faq, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-lg animate__animated animate__fadeInUp">
+            <div key={index} className="bg-white rounded-lg border border-neutral-100 shadow-sm animate__animated animate__fadeInUp">
               <button
                 className="faq-button w-full px-6 py-4 text-left focus:outline-none"
                 onClick={() => toggleFaq(index)}
@@ -61,7 +61,7 @@ const Faq = () => {
               </button>
               {openIndex === index && (
                 <div className="faq-answer px-6 pb-4">
-                  <p className="text-gray-900 leading-relaxed">{faq.answer}</p>
+                  <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
                 </div>
               )}
             </div>

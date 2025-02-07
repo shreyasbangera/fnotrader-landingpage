@@ -328,13 +328,11 @@ const Discover = () => {
     setActiveSection(id)
   }
 
-  console.log(activeImages, currentImageIndex)
-
   return (
-    <section id="discover" className="py-12 lg:py-20  bg-blue-600">
+    <section id="discover" className="py-12 lg:py-20 bg-gradient-to-r from-blue-700 to-blue-600">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-semibold text-white mb-4">
+        <div className="text-center lg:mb-16 mb-12">
+          <h2 className="text-2xl lg:text-4xl font-semibold text-white mb-4">
             Discover
           </h2>
           <p className="text-base lg:text-lg text-gray-100">
@@ -343,22 +341,22 @@ const Discover = () => {
         </div>
         <div className="flex flex-col lg:flex-row px-4 sm:px-6 lg:px-8 items-center gap-8 lg:gap-0 lg:justify-between">
           {/* Left sidebar with sections */}
-          <div className="w-full lg:max-w-sm space-y-2 overflow-y-auto max-h-[33rem] pr-2 lg:discover-scrollbar">
+          <div className="w-full lg:max-w-sm space-y-2 overflow-y-auto max-h-[33rem] pr-4 lg:discover-scrollbar">
             {sections.map((section) => (
               <div
                 key={section.id}
                 onClick={() => handleSwitchSection(section.id)}
-                className={`px-6 py-4 rounded-lg cursor-pointer shadow-lg border border-blue-400 transition-colors 
+                className={`px-6 py-4 rounded-lg cursor-pointer border border-blue-300 transition-colors 
                 hover:bg-accent hover:text-accent-foreground 
                 ${
                   activeSection === section.id
                     ? "bg-white text-blue-600 shadow-lg"
-                    : "text-white"
+                    : "text-white hover:bg-white/10"
                 }`}
               >
                 <h2 className="text-base font-medium">{section.title}</h2>
                 <p
-                  className={`text-sm mt-4 font-normal leading-6 ${
+                  className={`text-sm mt-3 font-normal leading-6 ${
                     activeSection === section.id
                       ? "text-gray-600"
                       : "text-gray-100"
@@ -372,7 +370,7 @@ const Discover = () => {
 
           {/* Right side image */}
           <div className="max-w-3xl">
-            <div className="bg-white rounded-2xl shadow-xl h-full relative">
+            <div className="bg-white rounded-2xl shadow-md border border-neutral-100 h-full relative">
               {activeImages.length > 0 && (
                 <div className="lg:px-16 py-2 px-4 lg:h-[440px] xl:h-[480px] h-[370px] sm:h-[505px] min-w-[250px]">
                   <h3 className="text-lg lg:text-xl text-gray-900 font-medium text-center py-4">

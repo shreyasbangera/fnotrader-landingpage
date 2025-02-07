@@ -4,8 +4,8 @@ const Products = () => {
   return (
 <section id="features" className="py-12 lg:py-20 bg-white">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="text-center mb-16 animate__animated animate__fadeIn">
-      <h2 className="text-3xl font-semibold text-black sm:text-4xl">
+    <div className="text-center lg:mb-16 mb-12">
+      <h2 className="text-2xl font-semibold text-black sm:text-4xl">
         Advanced Options Analysis Tools
       </h2>
       <p className="mt-4 text-base lg:text-lg text-gray-600">

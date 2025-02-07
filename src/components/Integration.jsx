@@ -64,7 +64,7 @@ const Integration = () => {
     <section id="integration" className="py-12 lg:py-20 bg-white">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative w-full overflow-hidden">
       <h2 className="text-xl text-gray-900 font-semibold mb-8 text-center">
-        INTEGRATES WITH
+        Integrates with
       </h2>
       <div className="relative flex overflow-x-hidden">
         <div className="animate-marquee flex space-x-8 py-4">

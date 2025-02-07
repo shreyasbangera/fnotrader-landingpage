@@ -37,7 +37,7 @@ const Header = () => {
       </div>
     </div>
 
-    {isNavOpen && <div id="mobile-menu" className='bg-white'>
+    {isNavOpen && <div id="mobile-menu" className='fixed w-full bg-white'>
       <div className="flex flex-col space-y-2 px-4 py-4">
       <Link to="/#hero" className="text-gray-600 hover:text-blue-600 px-3 py-2">Home</Link>
       <Link to="/#discover" className="text-gray-600 hover:text-blue-600 px-3 py-2">Discover</Link>
