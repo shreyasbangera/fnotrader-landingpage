@@ -63,11 +63,11 @@ const Integration = () => {
   return (
     <section id="integration" className="py-12 lg:py-20 bg-white">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative w-full overflow-hidden">
-      <h2 className="text-xl text-gray-900 font-semibold mb-8 text-center">
+      <h2 className="text-xl lg:text-3xl text-gray-900 font-semibold lg:mb-16 mb-12 text-center">
         Integrates with
       </h2>
       <div className="relative flex overflow-x-hidden">
-        <div className="animate-marquee flex space-x-8 py-4">
+        <div className="animate-marquee flex space-x-8 items-center">
           {partners.map((partner, index) => (
             <div 
               key={index}
@@ -81,7 +81,7 @@ const Integration = () => {
             </div>
           ))}
         </div>
-        <div className="animate-marquee2 flex space-x-8 py-4 absolute top-0">
+        <div className="animate-marquee2 flex space-x-8 absolute top-0">
           {partners.map((partner, index) => (
             <div 
               key={index}

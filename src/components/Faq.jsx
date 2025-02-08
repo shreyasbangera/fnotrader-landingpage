@@ -36,7 +36,7 @@ const Faq = () => {
     <section id="faq" className="bg-blue-50 py-12 lg:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center lg:mb-16 mb-12">
-          <h2 className="text-2xl lg:text-4xl font-semibold text-gray-900 mb-4">Frequently asked questions</h2>
+          <h2 className="text-2xl lg:text-4xl font-semibold text-gray-900 lg:mb-4 mb-2">Frequently asked questions</h2>
           <p className="text-base lg:text-lg text-gray-600">Got questions? We've got answers</p>
         </div>
 

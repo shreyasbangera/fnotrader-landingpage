@@ -36,7 +36,7 @@ const MediaShowcase = () => {
     <section id="education" className="py-12 lg:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center lg:mb-16 mb-12">
-      <h2 className="text-2xl lg:text-4xl text-gray-900 font-semibold mb-4">See our platform in action</h2>
+      <h2 className="text-2xl lg:text-4xl text-gray-900 font-semibold lg:mb-4 mb-2">See our platform in action</h2>
       <p className="text-base lg:text-lg text-gray-600">Get a live preview of our trading platform.</p>
       </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">

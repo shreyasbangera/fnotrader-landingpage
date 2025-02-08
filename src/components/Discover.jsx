@@ -332,7 +332,7 @@ const Discover = () => {
     <section id="discover" className="py-12 lg:py-20 bg-gradient-to-r from-blue-700 to-blue-600">
       <div className="max-w-7xl mx-auto">
         <div className="text-center lg:mb-16 mb-12">
-          <h2 className="text-2xl lg:text-4xl font-semibold text-white mb-4">
+          <h2 className="text-2xl lg:text-4xl font-semibold text-white lg:mb-4 mb-2">
             Discover
           </h2>
           <p className="text-base lg:text-lg text-gray-100">
@@ -341,7 +341,7 @@ const Discover = () => {
         </div>
         <div className="flex flex-col lg:flex-row px-4 sm:px-6 lg:px-8 items-center gap-8 lg:gap-0 lg:justify-between">
           {/* Left sidebar with sections */}
-          <div className="w-full lg:max-w-sm space-y-2 overflow-y-auto max-h-[33rem] pr-4 lg:discover-scrollbar">
+          <div className="w-full lg:max-w-sm space-y-2 overflow-y-auto max-h-[32.5rem] lg:pr-4 lg:discover-scrollbar">
             {sections.map((section) => (
               <div
                 key={section.id}
