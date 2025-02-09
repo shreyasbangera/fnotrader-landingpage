@@ -1,8 +1,9 @@
+import { ArrowRight, BarChart3, BookOpen, CheckCircle, Zap } from 'lucide-react'
 import React from 'react'
 
 const Mission = () => {
   return (
-    <section id="mission" className="py-12 lg:py-20 bg-gradient-to-r from-blue-700 to-blue-600">
+    <section id="mission" className="py-12 lg:py-20 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center lg:mb-16 mb-12">
         <h2 className="text-2xl text-white lg:text-4xl font-semibold lg:mb-4 mb-2">Our Mission</h2>
@@ -10,75 +11,88 @@ const Mission = () => {
       </div>
 
       <div className="grid md:grid-cols-2 gap-12 items-center">
-        <div className="prose prose-lg text-gray-100">
+        <div className="space-y-8">
+        <div className="prose prose-lg text-blue-50">
           <p className="mb-6">At FNOTrader, our mission is to empower Futures and Options (F&amp;O) traders with unique market insights, unconventional charts, and other essential tools needed to navigate the markets with unparalleled confidence and success in the dynamic world of F&amp;O Trading.</p>
           <p>We simplify market analysis and trade execution through our trader-focused products, Discover and QuikTrade.</p>
+          </div>
           
-          <div className="mt-8 space-y-4">
-            <div className="flex items-center space-x-3">
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-              </svg>
-              <span>Real-time market analysis</span>
-            </div>
-            <div className="flex items-center space-x-3">
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-              </svg>
-              <span>Advanced trading tools</span>
-            </div>
-            <div className="flex items-center space-x-3">
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-              </svg>
-              <span>Educational resources</span>
+          <div className="grid gap-4">
+              <div className="flex items-center space-x-4 bg-white/10 backdrop-blur-sm rounded-xl p-4 transition-all duration-300 hover:bg-white/20">
+                <div className="flex-shrink-0">
+                  <CheckCircle className="w-6 h-6 text-blue-200" />
+                </div>
+                <div>
+                  <h3 className="text-white font-medium">Real-time Analysis</h3>
+                  <p className="text-blue-100 text-sm">Advanced market insights and data visualization</p>
+                </div>
+              </div>
+              <div className="flex items-center space-x-4 bg-white/10 backdrop-blur-sm rounded-xl p-4 transition-all duration-300 hover:bg-white/20">
+                <div className="flex-shrink-0">
+                  <CheckCircle className="w-6 h-6 text-blue-200" />
+                </div>
+                <div>
+                  <h3 className="text-white font-medium">Professional Tools</h3>
+                  <p className="text-blue-100 text-sm">Enterprise-grade trading and analysis tools</p>
+                </div>
+              </div>
+              <div className="flex items-center space-x-4 bg-white/10 backdrop-blur-sm rounded-xl p-4 transition-all duration-300 hover:bg-white/20">
+                <div className="flex-shrink-0">
+                  <CheckCircle className="w-6 h-6 text-blue-200" />
+                </div>
+                <div>
+                  <h3 className="text-white font-medium">Learning Resources</h3>
+                  <p className="text-blue-100 text-sm">Comprehensive educational content and mentorship</p>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
 
         <div className="relative">
-          <div className="bg-white shadow-md border border-neutral-100 rounded-2xl p-8">
+        {/* <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-600 transform rotate-3 rounded-2xl opacity-20 blur-xl" /> */}
+          <div className="bg-white shadow-2xl border border-neutral-100 rounded-2xl p-8">
             <div className="space-y-6">
-              <div className="flex items-center space-x-4">
-                <div className="bg-blue-600 rounded-full p-3">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
-                  </svg>
+            <div className="group flex items-start space-x-4 p-4 rounded-xl transition-all duration-300 hover:bg-blue-50">
+                  <div className="flex-shrink-0">
+                    <div className="bg-blue-600 rounded-xl p-3 shadow-lg transition-all duration-300 group-hover:scale-110">
+                      <BookOpen className="w-6 h-6 text-white" />
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">Getting Started</h3>
+                    <p className="text-gray-600 text-sm mt-1">Learn the basics of F&O trading</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-semibold">Getting Started</h3>
-                  <p className="text-gray-600 text-sm">Learn the basics of F&amp;O trading</p>
+
+                <div className="group flex items-start space-x-4 p-4 rounded-xl transition-all duration-300 hover:bg-blue-50">
+                  <div className="flex-shrink-0">
+                    <div className="bg-blue-600 rounded-xl p-3 shadow-lg transition-all duration-300 group-hover:scale-110">
+                      <Zap className="w-6 h-6 text-white" />
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">Advanced Strategies</h3>
+                    <p className="text-gray-600 text-sm mt-1">Master complex trading techniques</p>
+                  </div>
+                </div>
+
+                <div className="group flex items-start space-x-4 p-4 rounded-xl transition-all duration-300 hover:bg-blue-50">
+                  <div className="flex-shrink-0">
+                    <div className="bg-blue-600 rounded-xl p-3 shadow-lg transition-all duration-300 group-hover:scale-110">
+                      <BarChart3 className="w-6 h-6 text-white" />
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">Market Analysis</h3>
+                    <p className="text-gray-600 text-sm mt-1">Deep dive into market mechanics</p>
+                  </div>
                 </div>
               </div>
 
-              <div className="flex items-center space-x-4">
-                <div className="bg-blue-600 rounded-full p-3">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                  </svg>
-                </div>
-                <div>
-                  <h3 className= "font-semibold">Advanced Strategies</h3>
-                  <p className="text-gray-600">Master complex trading techniques</p>
-                </div>
-              </div>
-
-              <div className="flex items-center space-x-4">
-                <div className="bg-blue-600 rounded-full p-3">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-                  </svg>
-                </div>
-                <div>
-                  <h3 className= "font-semibold">Market Analysis</h3>
-                  <p className="text-gray-600">Deep dive into market mechanics</p>
-                </div>
-              </div>
-            </div>
-
-            <button className="w-full mt-8 bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-              Start Learning
-            </button>
+              <button className="group w-full mt-8 bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-600/25 flex items-center justify-center space-x-2">
+                <span>Start Your Journey</span>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </button>
           </div>
         </div>
       </div>

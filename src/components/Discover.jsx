@@ -41,6 +41,7 @@ const Discover = () => {
   const [activeSection, setActiveSection] = useState("orderflowchartings");
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   const sections = [
     {
@@ -329,39 +330,36 @@ const Discover = () => {
   }
 
   return (
-    <section id="discover" className="py-12 lg:py-20 bg-gradient-to-r from-blue-700 to-blue-600">
+    <section id="discover" className="py-12 lg:py-20 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800">
       <div className="max-w-7xl mx-auto">
         <div className="text-center lg:mb-16 mb-12">
           <h2 className="text-2xl lg:text-4xl font-semibold text-white lg:mb-4 mb-2">
             Discover
           </h2>
           <p className="text-base lg:text-lg text-gray-100">
-            Find trades like a pro
+          Gain an edge with our advanced trading tools and analytics
           </p>
         </div>
         <div className="flex flex-col lg:flex-row px-4 sm:px-6 lg:px-8 items-center gap-8 lg:gap-0 lg:justify-between">
           {/* Left sidebar with sections */}
-          <div className="w-full lg:max-w-sm space-y-2 overflow-y-auto max-h-[32.5rem] lg:pr-4 lg:discover-scrollbar">
+          <div className="w-full lg:max-w-sm space-y-2 overflow-y-auto max-h-[31.5rem] lg:pr-4 lg:discover-scrollbar">
             {sections.map((section) => (
               <div
                 key={section.id}
                 onClick={() => handleSwitchSection(section.id)}
-                className={`px-6 py-4 rounded-lg cursor-pointer border border-blue-300 transition-colors 
-                hover:bg-accent hover:text-accent-foreground 
+                className={`px-6 py-4 rounded-xl cursor-pointer border transition-all duration-300 group 
                 ${
                   activeSection === section.id
-                    ? "bg-white text-blue-600 shadow-lg"
-                    : "text-white hover:bg-white/10"
+                    ? "bg-white shadow-lg"
+                    : "bg-white/10 border-white/20 hover:bg-white/20"
                 }`}
               >
-                <h2 className="text-base font-medium">{section.title}</h2>
-                <p
-                  className={`text-sm mt-3 font-normal leading-6 ${
-                    activeSection === section.id
-                      ? "text-gray-600"
-                      : "text-gray-100"
-                  }`}
-                >
+                  <h3 className={`text-lg font-semibold mb-2 transition-colors
+                  ${activeSection === section.id ? "text-blue-600" : "text-white"}`}>
+                  {section.title}
+                </h3>
+                <p className={`text-sm leading-relaxed transition-colors
+                  ${activeSection === section.id ? "text-gray-600" : "text-blue-100"}`}>
                   {section.description}
                 </p>
               </div>
@@ -378,25 +376,27 @@ const Discover = () => {
                   </h3>
                   <img
                     onClick={openModal}
+                    onLoad={() => setIsImageLoaded(true)}
                     src={
                       activeImages[currentImageIndex]?.file || "/placeholder.svg"
                     }
                     alt={activeImages[currentImageIndex]?.title}
-                    className="w-full p-2 shadow-lg object-contain rounded-lg"
+                    className={`w-full p-2 shadow-lg cursor-pointer object-contain rounded-lg transition-opacity duration-300 ${isImageLoaded ? "opacity-100" : "opacity-0"}`}
                   />
+
                   {activeImages.length > 1 && (
                     <>
                       <button
                         onClick={prevImage}
-                        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/80 rounded-full p-2 shadow-md"
+                        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 rounded-full p-2 shadow-lg hover:bg-white transition-all duration-200 group"
                       >
-                        <ChevronLeft className="w-6 h-6 text-gray-600" />
+                        <ChevronLeft className="w-6 h-6 text-gray-600 group-hover:text-blue-600" />
                       </button>
                       <button
                         onClick={nextImage}
-                        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/80 rounded-full p-2 shadow-md"
+                        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/80 rounded-full p-2 shadow-lg hover:bg-white transition-all duration-200 group"
                       >
-                        <ChevronRight className="w-6 h-6 text-gray-600" />
+                        <ChevronRight className="w-6 h-6 text-gray-600 group-hover:text-blue-600" />
                       </button>
                     </>
                   )}
