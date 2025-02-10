@@ -9,7 +9,7 @@ html{
 
 @layer components {
   .discover-scrollbar::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
   }
   
   .discover-scrollbar::-webkit-scrollbar-track {
@@ -22,7 +22,23 @@ html{
   }
   
   .discover-scrollbar::-webkit-scrollbar-thumb:hover {
-    background: white;
+    background: #60a5fa;
+  }
+  .quiktrade-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .quiktrade-scrollbar::-webkit-scrollbar-track {
+    background: transparent; 
+  }
+  
+  .quiktrade-scrollbar::-webkit-scrollbar-thumb {
+    background: #e5e5e5; 
+    border-radius: 4px;
+  }
+  
+  .quiktrade-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #d4d4d4;
   }
 }
 

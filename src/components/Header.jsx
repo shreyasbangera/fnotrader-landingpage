@@ -18,7 +18,7 @@ const Header = () => {
           <nav className="flex items-center font-medium space-x-4">
             <Link to="/#hero" className="text-gray-600 hover:bg-neutral-100 rounded-lg px-3 py-2">Home</Link>
             <Link to="/#discover" className="text-gray-600 hover:bg-neutral-100 rounded-lg px-3 py-2">Discover</Link>
-            <Link to="/#quicktrade" className="text-gray-600 hover:bg-neutral-100 rounded-lg px-3 py-2">Quicktrade</Link>
+            <Link to="/#quiktrade" className="text-gray-600 hover:bg-neutral-100 rounded-lg px-3 py-2">Quicktrade</Link>
             <Link to="/pricing" className="text-gray-600 hover:bg-neutral-100 rounded-lg px-3 py-2">Pricing</Link>
             <Link to="/#education" className="text-gray-600 hover:bg-neutral-100 rounded-lg px-3 py-2">Education</Link>
             <Link to="/contact" className="text-gray-600 hover:bg-neutral-100 rounded-lg px-3 py-2">Contact</Link>
@@ -45,7 +45,7 @@ const Header = () => {
       <nav className="flex flex-col space-y-2 font-medium px-4 py-4 shadow-lg">
       <Link to="/#hero" className="text-gray-600 hover:bg-neutral-100 px-3 py-3">Home</Link>
       <Link to="/#discover" className="text-gray-600 hover:bg-neutral-100 px-3 py-3">Discover</Link>
-      <Link to="/#quicktrade" className="text-gray-600 hover:bg-neutral-100 px-3 py-3">Quicktrade</Link>
+      <Link to="/#quiktrade" className="text-gray-600 hover:bg-neutral-100 px-3 py-3">Quicktrade</Link>
       <Link to="/pricing" className="text-gray-600 hover:bg-neutral-100 px-3 py-3">Pricing</Link>
       <Link to="/#education" className="text-gray-600 hover:bg-neutral-100 px-3 py-3">Education</Link>
       <Link to="/contact" className="text-gray-600 hover:bg-neutral-100 px-3 py-3">Contact</Link>
