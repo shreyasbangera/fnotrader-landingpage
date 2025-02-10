@@ -368,7 +368,7 @@ const Discover = () => {
 
           {/* Right side image */}
           <div className="max-w-3xl">
-            <div className="bg-white rounded-2xl shadow-md border border-neutral-100 h-full relative">
+            <div className="bg-white rounded-2xl shadow-md border border-white/20 h-full relative">
               {activeImages.length > 0 && (
                 <div className="lg:px-16 py-2 px-4 lg:h-[440px] xl:h-[480px] h-[370px] sm:h-[505px] min-w-[250px]">
                   <h3 className="text-lg lg:text-xl text-gray-900 font-medium text-center py-4">

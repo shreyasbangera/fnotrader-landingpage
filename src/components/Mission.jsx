@@ -10,7 +10,7 @@ const Mission = () => {
         <p className="text-base lg:text-lg text-gray-100">Learn and Grow with FNOTrader</p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-12 items-center">
+      <div className="grid lg:grid-cols-2 gap-12 items-center">
         <div className="space-y-8">
         <div className="prose prose-lg text-blue-50">
           <p className="mb-6">At FNOTrader, our mission is to empower Futures and Options (F&amp;O) traders with unique market insights, unconventional charts, and other essential tools needed to navigate the markets with unparalleled confidence and success in the dynamic world of F&amp;O Trading.</p>
@@ -49,9 +49,8 @@ const Mission = () => {
           </div>
 
         <div className="relative">
-        {/* <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-600 transform rotate-3 rounded-2xl opacity-20 blur-xl" /> */}
-          <div className="bg-white shadow-2xl border border-neutral-100 rounded-2xl p-8">
-            <div className="space-y-6">
+          <div className="bg-white rounded-2xl lg:px-8 py-8 px-4">
+            <div className="space-y-4">
             <div className="group flex items-start space-x-4 p-4 rounded-xl transition-all duration-300 hover:bg-blue-50">
                   <div className="flex-shrink-0">
                     <div className="bg-blue-600 rounded-xl p-3 shadow-lg transition-all duration-300 group-hover:scale-110">

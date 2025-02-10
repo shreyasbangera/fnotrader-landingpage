@@ -25,8 +25,8 @@ const Header = () => {
           </nav>
         </div>
         <div className="hidden lg:flex items-center font-medium space-x-4">
-          <Link to="/#cta" className="bg-white hover:bg-neutral-100 border border-neutral-200 px-8 py-3 text-center rounded-md">Login</Link>
-          <Link to="/#cta" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-center rounded-md">Register</Link>
+          <Link to="/#cta" className="bg-white hover:bg-neutral-100 border border-neutral-200 px-8 py-3 text-center rounded-lg">Login</Link>
+          <Link to="/#cta" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-center rounded-lg">Register</Link>
         </div>
 
         <div className="lg:hidden">
@@ -43,12 +43,12 @@ const Header = () => {
 
     {isNavOpen && <div id="mobile-menu" className='fixed w-full bg-white border-t border-neutral-200'>
       <nav className="flex flex-col space-y-2 font-medium px-4 py-4 shadow-lg">
-      <Link to="/#hero" className="text-gray-600 hover:text-blue-600 px-3 py-3">Home</Link>
-      <Link to="/#discover" className="text-gray-600 hover:text-blue-600 px-3 py-3">Discover</Link>
-      <Link to="/#quicktrade" className="text-gray-600 hover:text-blue-600 px-3 py-3">Quicktrade</Link>
-      <Link to="/pricing" className="text-gray-600 hover:text-blue-600 px-3 py-3">Pricing</Link>
-      <Link to="/#education" className="text-gray-600 hover:text-blue-600 px-3 py-3">Education</Link>
-      <Link to="/contact" className="text-gray-600 hover:text-blue-600 px-3 py-3">Contact</Link>
+      <Link to="/#hero" className="text-gray-600 hover:bg-neutral-100 px-3 py-3">Home</Link>
+      <Link to="/#discover" className="text-gray-600 hover:bg-neutral-100 px-3 py-3">Discover</Link>
+      <Link to="/#quicktrade" className="text-gray-600 hover:bg-neutral-100 px-3 py-3">Quicktrade</Link>
+      <Link to="/pricing" className="text-gray-600 hover:bg-neutral-100 px-3 py-3">Pricing</Link>
+      <Link to="/#education" className="text-gray-600 hover:bg-neutral-100 px-3 py-3">Education</Link>
+      <Link to="/contact" className="text-gray-600 hover:bg-neutral-100 px-3 py-3">Contact</Link>
       <Link to="/#cta" className="bg-white border border-neutral-200 px-4 py-3 h-12 text-center rounded-md">Login</Link>
       <Link to="/#cta" className="bg-blue-600 text-white px-4 py-3 h-12 text-center rounded-md">Register</Link>
       </nav>
