@@ -319,7 +319,6 @@ const Home = () => {
   return (
     <>
       <Hero />
-      {/* <Products /> */}
       <Integration />
       <Feature
         features={discoverFeatures}
@@ -333,6 +332,7 @@ const Home = () => {
         subtitle="Gain an edge with our advanced trading tools and analytics"
         theme="white"
       />
+      <Products />
       <Testimonials />
       <Mission />
       <MediaShowcase />

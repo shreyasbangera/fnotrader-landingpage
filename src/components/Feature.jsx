@@ -44,23 +44,16 @@ const Feature = ({features, title, subtitle, theme}) => {
     blue: {
       background: "bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800",
       text: "text-white",
-      sectionBg: "bg-white/10",
-      activeSectionBg: "bg-white",
-      sectionBorder: "border-white/20",
-      sectionBorderHover: "hover:bg-white/20",
-      sectionTextHover: "group-hover:text-white",
+      inactiveSection: "bg-white/10 border-white/20 hover:bg-white/20",
+      activeSection: "bg-white",
     },
     white: {
-      background: "bg-blue-50",
+      background: "bg-gradient-to-br from-slate-50 to-blue-50",
       text: "text-gray-900",
-      sectionBg: "bg-white/20",
-      activeSectionBg: "bg-white",
-      sectionBorder: "border-neutral-200",
-      sectionBorderHover: "hover:bg-slate-200",
-      sectionTextHover: "group-hover:text-gray-900",
-
+      inactiveSection: "bg-white border-blue-100 hover:border-blue-200 hover:bg-blue-50",
+      activeSection: "bg-blue-600",
     },
-  }
+  };
 
   return (
     <section id={title.toLowerCase()} className={`py-12 lg:py-20 ${themeClasses[theme].background}`}>
@@ -71,38 +64,50 @@ const Feature = ({features, title, subtitle, theme}) => {
       </div>
       <div className="flex flex-col lg:flex-row px-4 sm:px-6 lg:px-8 items-center gap-8 lg:gap-0 lg:justify-between">
         {/* Left sidebar with features */}
-        <div className={`w-full lg:max-w-sm space-y-2 overflow-y-auto max-h-[31.5rem] lg:pr-4 ${themeClasses[theme] === "blue" ? "lg:discover-scrollbar" : "lg:quiktrade-scrollbar"}`}
->
-
+        <div className={`w-full lg:max-w-sm overflow-y-auto max-h-[35.5rem] ${theme === "blue" ? "lg:discover-scrollbar" : "lg:quiktrade-scrollbar"}`}>
+        <div className="lg:pr-3 pb-2 space-y-3">
+        {/* <div> */}
           {features.map((section) => (
             <div
               key={section.id}
               onClick={() => handleSwitchSection(section.id)}
-              className={`px-6 py-4 rounded-lg cursor-pointer border  transition-all duration-300 group 
+              className={`p-6 rounded-lg cursor-pointer border  transition-all duration-300 group shadow-md
               ${
                 activeSection === section.id
-                  ? `${themeClasses[theme].activeSectionBg} shadow-lg`
-                  : `${themeClasses[theme].sectionBg} shadow-md ${themeClasses[theme].sectionBorder} ${themeClasses[theme].sectionBorderHover}`
+                  ? `${themeClasses[theme].activeSection}`
+                  : `${themeClasses[theme].inactiveSection}`
               }`}
             >
-              <h3
-                className={`text-lg font-semibold mb-2 transition-colors
-                ${activeSection === section.id ? "text-blue-600" : themeClasses[theme].text}`}
-              >
-                {section.title}
-              </h3>
+                <h3
+                  className={`text-lg font-semibold mb-2.5 transition-colors
+                  ${
+                    activeSection === section.id
+                      ? theme === 'white' ? 'text-white' : 'text-blue-600'
+                      : `${themeClasses[theme].text}`
+                  }`}
+                >
+                  {section.title}
+                </h3>
               <p
-                className={`text-sm leading-relaxed transition-colors
-                ${activeSection === section.id ? "text-gray-600" : theme === "blue" ? "text-blue-100" : "text-gray-600"}`}
-              >
-                {section.description}
-              </p>
+                  className={`text-sm leading-relaxed transition-colors
+                  ${
+                    activeSection === section.id
+                      ? theme === 'white' ? 'text-blue-50' : 'text-gray-600'
+                      : theme === "blue"
+                      ? "text-blue-100"
+                      : "text-gray-500"
+                  }`}
+                >
+                  {section.description}
+                </p>
             </div>
           ))}
+          {/* </div> */}
+          </div>
         </div>
 
         {/* Right side image */}
-        <div className="max-w-3xl">
+        <div className="max-w-3xl w-full">
           <div className="bg-white rounded-xl shadow-lg border border-neutral-200 h-full relative">
             {activeImages.length > 0 && (
               <div className="lg:px-16 py-2 px-4 lg:h-[440px] xl:h-[480px] h-[370px] sm:h-[505px] min-w-[250px]">

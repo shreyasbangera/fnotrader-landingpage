@@ -375,7 +375,7 @@ const Pricing = () => {
         </div>
 
       <div className="grid md:grid-cols-3 gap-8">
-        <div className="bg-gradient-to-b from-blue-500/20 to-transparent rounded-2xl p-8 shadow-xl animate__animated animate__fadeInLeft hover:transform hover:scale-105 transition-all duration-300">
+        <div className="bg-gradient-to-b from-blue-500/20 to-transparent rounded-xl p-8 shadow-xl animate__animated animate__fadeInLeft hover:transform hover:scale-105 transition-all duration-300">
           <div className="text-center">
             <h3 className="text-2xl font-semibold mb-4">Basic</h3>
             <div className="mb-6">

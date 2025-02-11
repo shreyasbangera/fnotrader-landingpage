@@ -49,7 +49,7 @@ const Mission = () => {
           </div>
 
         <div className="relative">
-          <div className="bg-white rounded-2xl lg:px-8 py-8 px-4">
+          <div className="bg-white rounded-xl lg:px-8 py-8 px-4">
             <div className="space-y-4">
             <div className="group flex items-start space-x-4 p-4 rounded-xl transition-all duration-300 hover:bg-blue-50">
                   <div className="flex-shrink-0">

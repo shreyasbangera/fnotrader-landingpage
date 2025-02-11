@@ -42,7 +42,7 @@ const Hero = () => {
             <img
               src="https://fnotrader.com/static/media/banner.c89f7456.jpg"
               alt="Trading Platform"
-              className="rounded-lg shadow-2xl w-full transition-opacity duration-300 opacity-100"
+              className="rounded-xl shadow-2xl w-full transition-opacity duration-300 opacity-100"
             />
           </div>
         </div>
