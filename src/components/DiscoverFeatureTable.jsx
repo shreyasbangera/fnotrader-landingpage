@@ -19,7 +19,7 @@ const DiscoverFeatureTable = ({ features }) => (
         </div>
       </div>
 
-      <div className="max-h-[32rem] overflow-y-auto pricing-scrollbar">
+      <div className="max-h-[35rem] overflow-y-auto pricing-scrollbar">
         {features.map((feature, index) => (
           <div
             key={feature.name}

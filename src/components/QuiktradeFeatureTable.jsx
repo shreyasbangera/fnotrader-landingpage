@@ -17,7 +17,7 @@ const QuikTradeFeatureTable = ({ features }) => (
       </div>
 
       {/* Scrollable Content */}
-      <div className="max-h-[32rem] overflow-y-auto pricing-scrollbar">
+      <div className="max-h-[33rem] overflow-y-auto pricing-scrollbar">
         {features.map((feature, index) => (
           <div
             key={feature.name}
