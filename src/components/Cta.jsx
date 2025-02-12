@@ -1,3 +1,4 @@
+import { ArrowRight } from 'lucide-react'
 import React from 'react'
 
 const Cta = () => {
@@ -15,11 +16,9 @@ const Cta = () => {
             Join thousands of successful traders who have transformed their trading with FNOTrader
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#" className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-medium rounded-lg text-blue-600 bg-white hover:bg-gray-100 transition-colors duration-300">
-              Start Free Trial
-              <svg className="ml-2 -mr-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-              </svg>
+            <a href="#" className="group inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-medium rounded-lg text-blue-600 bg-white hover:bg-gray-100 transition-colors duration-300 space-x-2">
+              <span>Start Free Trial</span>
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
             <a href="#" className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium rounded-lg text-white bg-blue-800 hover:bg-blue-900 transition-colors duration-300">
               Schedule Demo

@@ -34,7 +34,7 @@ const Testimonials = () => {
           <div className="swiper-container">
             <div className="grid md:grid-cols-2 gap-8">
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="bg-white rounded-xl p-8 border border-neutral-100 shadow-md">
+                <div key={index} className="bg-white rounded-xl p-8 border border-gray-200 shadow-sm">
                   <div className="flex items-center mb-6">
                     <div className="flex-1">
                       <p className="text-gray-900 font-semibold">{testimonial.name}</p>
@@ -43,7 +43,7 @@ const Testimonials = () => {
                       </div>
                     </div>
                   </div>
-                  <p className="text-gray-600 leading-relaxed">{testimonial.text}</p>
+                  <p className="text-gray-600 text-sm leading-relaxed">{testimonial.text}</p>
                 </div>
               ))}
             </div>

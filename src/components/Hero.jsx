@@ -30,7 +30,7 @@ const Hero = () => {
             </a>
             <a
               href="#features"
-              className="inline-block bg-white text-gray-900 px-8 py-3 rounded-lg text-base font-medium border border-neutral-200 hover:bg-neutral-100 transition-all duration-300 text-center shadow-md transform"
+              className="inline-block bg-white text-gray-900 px-8 py-3 rounded-lg text-base font-medium border border-gray-200 hover:bg-gray-100 transition-all duration-300 text-center shadow-md transform"
             >
               Watch Demo
             </a>

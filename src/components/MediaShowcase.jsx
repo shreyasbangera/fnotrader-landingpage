@@ -6,13 +6,13 @@ import { getYouTubeThumbnail, getYouTubeVideoId } from "../utils/general"
 const mediaItems = [
   {
     type: "youtube",
-    src: "https://youtu.be/eARn01pojQA?si=BYMXtRXYcAfWKJ7R",
-    title: "Platform Overview",
-    description: "A quick tour of our trading platform features.",
+    src: "https://youtu.be/Qpvh8DmcQcY?si=VcDTz5ynShqBDyMU",
+    title: "Quiktrade Features",
+    description: "Exploring QuikTrade: Order Configurations & Entry from Straddle-Strangle Chains",
   },
   {
-    type: "gif",
-    src: "https://example.com/animation1.gif",
+    type: "youtube",
+    src: "https://youtu.be/eARn01pojQA?si=BYMXtRXYcAfWKJ7R",
     title: "Real-time Analytics",
     description: "See how our real-time analytics work in action.",
   },
@@ -43,7 +43,7 @@ const MediaShowcase = () => {
           {mediaItems.slice(0,3).map((item, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-md border border-neutral-100 overflow-hidden transition-transform duration-300 hover:scale-105"
+              className="bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden transition-transform duration-300 hover:scale-105"
             >
               <a href={item.src} target="_blank">
               <div className="relative aspect-video">
@@ -99,18 +99,18 @@ const MediaShowcase = () => {
                   )}
                 </div>
               </div>
-            </a>
               <div className="p-4">
                 <h3 className="font-medium text-base mb-2">{item.title}</h3>
-                <p className="text-gray-600 text-sm">{item.description}</p>
+                <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
               </div>
+            </a>
             </div>
           ))}
         </div>
         {mediaItems.length > 3 && (
-          <div className="mt-8 text-center">
+          <div className="mt-12 text-center">
             <Link to="/videos"
-              className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg text-base font-medium border border-blue-600/50 hover:bg-blue-50 transition-all duration-300 text-center shadow-md transform"
+              className="inline-block bg-white px-8 py-3 rounded-lg text-base font-medium border border-gray-200 hover:bg-gray-100 transition-all duration-300 text-center shadow-md transform"
             >
               Show more
             </Link>

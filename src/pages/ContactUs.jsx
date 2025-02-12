@@ -56,7 +56,7 @@ const ContactUs = () => {
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {contactMethods.map((method, index) => (
-            <div key={index} className="bg-white p-6 border border-neutral-100 shadow-md rounded-lg h-full">
+            <div key={index} className="bg-white p-6 border border-gray-200 shadow-md rounded-lg h-full">
               <div className='flex items-center gap-4 mb-6'>
                 <div className="bg-blue-600 w-12 h-12 rounded-full flex items-center justify-center">
                   {method.icon}
@@ -70,7 +70,7 @@ const ContactUs = () => {
                 href={method.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center justify-between w-full px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 transition-colors"
+                className="group inline-flex items-center justify-between w-full px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-200 rounded-md hover:bg-gray-50 transition-colors"
               >
                 {method.linkText}
                 <ArrowRight className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />

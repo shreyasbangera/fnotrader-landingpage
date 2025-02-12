@@ -44,14 +44,14 @@ const Feature = ({features, title, subtitle, theme}) => {
     blue: {
       background: "bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800",
       text: "text-white",
-      inactiveSection: "bg-white/10 border-white/20 hover:bg-white/20",
-      activeSection: "bg-white",
+      inactiveSection: "bg-white/5 border-white/10 hover:bg-white/10 hover:border-white/20",
+      activeSection: "bg-white shadow-lg border-white",
     },
     white: {
-      background: "bg-gradient-to-br from-slate-50 to-blue-50",
+      background: "bg-blue-50",
       text: "text-gray-900",
-      inactiveSection: "bg-white border-blue-100 hover:border-blue-200 hover:bg-blue-50",
-      activeSection: "bg-blue-600",
+      inactiveSection: "bg-white border-gray-200 hover:bg-gray-100",
+      activeSection: "bg-blue-600 shadow-lg border-blue-600",
     },
   };
 
@@ -59,19 +59,19 @@ const Feature = ({features, title, subtitle, theme}) => {
     <section id={title.toLowerCase()} className={`py-12 lg:py-20 ${themeClasses[theme].background}`}>
     <div className="max-w-7xl mx-auto">
       <div className="text-center lg:mb-16 mb-12">
-        <h2 className={`text-2xl lg:text-4xl font-semibold ${themeClasses[theme].text} lg:mb-4 mb-2`}>{title}</h2>
+        <h2 className={`text-2xl lg:text-3xl font-semibold ${themeClasses[theme].text} lg:mb-4 mb-2`}>{title}</h2>
         <p className={`text-base lg:text-lg ${theme === "blue" ? "text-gray-100" : "text-gray-600"}`}>{subtitle}</p>
       </div>
       <div className="flex flex-col lg:flex-row px-4 sm:px-6 lg:px-8 items-center gap-8 lg:gap-0 lg:justify-between">
         {/* Left sidebar with features */}
-        <div className={`w-full lg:max-w-sm overflow-y-auto max-h-[35.5rem] ${theme === "blue" ? "lg:discover-scrollbar" : "lg:quiktrade-scrollbar"}`}>
+        <div className={`w-full lg:max-w-sm overflow-y-auto max-h-[36.5rem] ${theme === "blue" ? "lg:discover-scrollbar" : "lg:quiktrade-scrollbar"}`}>
         <div className="lg:pr-3 pb-2 space-y-3">
         {/* <div> */}
           {features.map((section) => (
             <div
               key={section.id}
               onClick={() => handleSwitchSection(section.id)}
-              className={`p-6 rounded-lg cursor-pointer border  transition-all duration-300 group shadow-md
+              className={`px-6 py-7 rounded-xl cursor-pointer border  transition-all duration-300 group shadow-sm
               ${
                 activeSection === section.id
                   ? `${themeClasses[theme].activeSection}`
@@ -108,10 +108,10 @@ const Feature = ({features, title, subtitle, theme}) => {
 
         {/* Right side image */}
         <div className="max-w-3xl w-full">
-          <div className="bg-white rounded-xl shadow-lg border border-neutral-200 h-full relative">
+          <div className={`bg-white rounded-xl shadow-lg border ${theme === "blue" ? "border-white" : "border-neutral-200"} h-full relative `}>
             {activeImages.length > 0 && (
-              <div className="lg:px-16 py-2 px-4 lg:h-[440px] xl:h-[480px] h-[370px] sm:h-[505px] min-w-[250px]">
-                <h3 className="text-lg lg:text-xl text-gray-900 font-medium text-center py-4">
+              <div className="lg:px-16 py-8 px-6 lg:h-[464px] xl:h-[504px] h-[394px] sm:h-[529px] min-w-[250px]">
+                <h3 className="text-lg lg:text-xl text-gray-900 font-medium text-center pb-4">
                   {activeImages[currentImageIndex]?.title}
                 </h3>
                 <img
@@ -140,7 +140,7 @@ const Feature = ({features, title, subtitle, theme}) => {
                     </button>
                   </>
                 )}
-                <p className="absolute bottom-2 lg:left-16 left-4 lg:right-16 right-4 text-gray-900 text-sm py-4 mt-4 leading-6">
+                <p className="absolute bottom-8 lg:left-16 left-6 lg:right-16 right-6 text-gray-900 text-sm leading-6">
                   {activeImages[currentImageIndex]?.description}
                 </p>
               </div>
