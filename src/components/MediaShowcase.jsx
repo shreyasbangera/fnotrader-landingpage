@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { Link } from "react-router"
 import { getYouTubeThumbnail, getYouTubeVideoId } from "../utils/general"
+import { Play } from "lucide-react"
 
 // Sample media items - replace with your actual content
 const mediaItems = [
@@ -33,17 +34,17 @@ const mediaItems = [
 const MediaShowcase = () => {
 
   return (
-    <section id="education" className="py-12 lg:py-20 bg-white">
+    <section id="education" className="py-12 lg:py-20 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center lg:mb-16 mb-12">
-      <h2 className="text-2xl lg:text-4xl text-gray-900 font-semibold lg:mb-4 mb-2">See our platform in action</h2>
-      <p className="text-base lg:text-lg text-gray-600">Get a live preview of our trading platform.</p>
+      <h2 className="text-3xl lg:text-4xl text-white font-semibold lg:mb-4 mb-2">See our platform in action</h2>
+      <p className="text-base lg:text-lg text-gray-100">Get a live preview of our trading platform.</p>
       </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {mediaItems.slice(0,3).map((item, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden transition-transform duration-300 hover:scale-105"
+              className="bg-white rounded-xl shadow-xl overflow-hidden transition-transform duration-300 hover:scale-105 group"
             >
               <a href={item.src} target="_blank">
               <div className="relative aspect-video">
@@ -59,28 +60,9 @@ const MediaShowcase = () => {
                     style={{ backgroundImage: `url(${item.src})` }}
                   />
                 )}
-                <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-                  {item.type === "video" ? (
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-16 w-16 text-white"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
-                      />
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                      />
-                    </svg>
+                <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {item.type === "youtube" ? (
+                    <Play className="h-16 w-16 text-white" />
                   ) : (
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

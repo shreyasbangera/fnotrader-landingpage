@@ -25,8 +25,8 @@ const Header = () => {
           </nav>
         </div>
         <div className="hidden lg:flex items-center font-medium space-x-4">
-          <Link to="/#cta" className="bg-white hover:bg-neutral-100 border border-neutral-200 px-8 py-3 text-center rounded-lg">Login</Link>
-          <Link to="/#cta" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-center rounded-lg">Register</Link>
+          <Link to="/#cta" className="bg-white hover:bg-neutral-100 border border-neutral-200 px-8 py-3 text-center rounded-xl">Login</Link>
+          <Link to="/#cta" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-center rounded-xl">Register</Link>
         </div>
 
         <div className="lg:hidden">

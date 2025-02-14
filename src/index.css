@@ -76,9 +76,9 @@ html{
 }
 
 .animate-marquee {
-  animation: marquee 25s linear infinite;
+  animation: marquee 20s linear infinite;
 }
 
 .animate-marquee2 {
-  animation: marquee2 25s linear infinite;
+  animation: marquee2 20s linear infinite;
 }

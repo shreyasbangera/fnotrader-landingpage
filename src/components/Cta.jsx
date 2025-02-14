@@ -9,7 +9,7 @@ const Cta = () => {
 
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+          <h2 className="text-2xl lg:text-4xl font-bold text-white mb-6">
             Start Trading Like a Pro Today
           </h2>
           <p className="text-base lg:text-lg text-blue-50 mb-8">

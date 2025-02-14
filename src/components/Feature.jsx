@@ -59,7 +59,7 @@ const Feature = ({features, title, subtitle, theme}) => {
     <section id={title.toLowerCase()} className={`py-12 lg:py-20 ${themeClasses[theme].background}`}>
     <div className="max-w-7xl mx-auto">
       <div className="text-center lg:mb-16 mb-12">
-        <h2 className={`text-2xl lg:text-3xl font-semibold ${themeClasses[theme].text} lg:mb-4 mb-2`}>{title}</h2>
+        <h2 className={`text-3xl lg:text-4xl font-semibold ${themeClasses[theme].text} lg:mb-4 mb-2`}>{title}</h2>
         <p className={`text-base lg:text-lg ${theme === "blue" ? "text-gray-100" : "text-gray-600"}`}>{subtitle}</p>
       </div>
       <div className="flex flex-col lg:flex-row px-4 sm:px-6 lg:px-8 items-center gap-8 lg:gap-0 lg:justify-between">

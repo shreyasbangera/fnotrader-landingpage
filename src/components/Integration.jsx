@@ -7,7 +7,7 @@ import dhanLogo from '../assets/dhan-logo.svg'
 import flatTradeLogo from '../assets/flattrade-logo.png'
 import fyersLogo from '../assets/fyers-logo.svg'
 import icicidirectLogo from '../assets/icicidirect-logo.svg'
-import shoonyaLogo from '../assets/shoonya-logo.png'
+import shoonyaLogo from '../assets/shoonya-logo.webp'
 import upstoxLogo from '../assets/upstox-logo.svg'
 import zerodhaLogo from '../assets/zerodha-logo.svg'
 
@@ -61,17 +61,16 @@ const Integration = () => {
       ];
 
   return (
-    <section id="integration" className="py-12 lg:py-20 bg-white">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative w-full overflow-hidden">
-      <h2 className="text-xl lg:text-3xl text-gray-900 font-semibold lg:mb-16 mb-12 text-center">
-        Integrates with
+    <div className="py-4 lg:py-8 w-full">
+      <h2 className="text-xl lg:text-2xl text-gray-900 font-semibold lg:mb-16 mb-12 text-center">
+      Integrates with leading brokers
       </h2>
       <div className="relative flex overflow-x-hidden">
-        <div className="animate-marquee flex space-x-8 items-center">
-          {partners.map((partner, index) => (
+        <div className="animate-marquee flex gap-8 pr-8 items-center">
+          {partners?.map((partner, index) => (
             <div 
               key={index}
-              className="flex items-center justify-center bg-white rounded-lg p-6 shadow-sm min-w-[200px]"
+              className="flex items-center justify-center bg-white rounded-xl py-6 px-8 shadow-sm min-w-[200px]"
             >
               <img 
                 src={partner.logo} 
@@ -81,11 +80,11 @@ const Integration = () => {
             </div>
           ))}
         </div>
-        <div className="animate-marquee2 flex space-x-8 absolute top-0">
-          {partners.map((partner, index) => (
+        <div className="animate-marquee2 flex items-center gap-8 pr-8 absolute top-0">
+          {partners?.map((partner, index) => (
             <div 
               key={index}
-              className="flex items-center justify-center bg-white rounded-lg p-6 shadow-sm min-w-[200px]"
+              className="flex items-center justify-center bg-white rounded-xl py-6 px-8 shadow-sm min-w-[200px]"
             >
               <img 
                 src={partner.logo} 
@@ -97,7 +96,6 @@ const Integration = () => {
         </div>
       </div>
     </div>
-    </section>
   )
 }
 

@@ -1,13 +1,11 @@
 import React from "react";
 import Hero from "./Hero";
-import Products from "./Products";
+// import Products from "./Products";
 import Testimonials from "./Testimonials";
 import Mission from "./Mission";
 import Faq from "./Faq";
 import Cta from "./Cta";
 import MediaShowcase from "./MediaShowcase";
-import Discover from "./Feature";
-import Integration from "./Integration";
 import orderflowcharting from "../assets/orderflow-charting.png";
 import advanceDecline from "../assets/futures/advance-decline.png";
 import marketMovers from "../assets/futures/market-movers.png";
@@ -319,7 +317,6 @@ const Home = () => {
   return (
     <>
       <Hero />
-      <Integration />
       <Feature
         features={discoverFeatures}
         title="Discover"
@@ -332,9 +329,9 @@ const Home = () => {
         subtitle="Gain an edge with our advanced trading tools and analytics"
         theme="white"
       />
-      <Products />
-      <Testimonials />
+      {/* <Products /> */}
       <Mission />
+      <Testimonials />
       <MediaShowcase />
       <Faq />
       <Cta />

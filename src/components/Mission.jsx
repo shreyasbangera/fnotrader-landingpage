@@ -6,7 +6,7 @@ const Mission = () => {
     <section id="mission" className="py-12 lg:py-20 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center lg:mb-16 mb-12">
-        <h2 className="text-2xl text-white lg:text-4xl font-semibold lg:mb-4 mb-2">Our Mission</h2>
+        <h2 className="text-3xl text-white lg:text-4xl font-semibold lg:mb-4 mb-2">Our Mission</h2>
         <p className="text-base lg:text-lg text-gray-100">Learn and Grow with FNOTrader</p>
       </div>
 
