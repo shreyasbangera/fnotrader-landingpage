@@ -1,10 +1,9 @@
 import React from 'react';
-import { Youtube, Twitter, Send, BarChart2 } from 'lucide-react';
 import { Link } from 'react-router';
 
 const Footer = () => {
   return (
-    <footer id="footer" className="bg-white text-gray-600 relative overflow-hidden border-t border-gray-200">
+    <footer id="footer" className="bg-blue-50 text-gray-600 relative overflow-hidden border-t border-gray-200">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-grid-slate-100 opacity-[0.02] -z-10" />
       <div className="absolute inset-0 bg-dots opacity-[0.02] -z-10" />
@@ -95,9 +94,10 @@ const Footer = () => {
       <div className="border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm">
-              © 2025 FNOTrader. All rights reserved.
+            <p className="text-sm text-gray-600">
+            All Rights Reserved | 2025 © Sukrisa Technologies LLP | <a className="text-gray-600 opacity-85" href="https://fnotrader.com" target="_blank" rel="noopener noreferrer">FNOTrader</a>®
             </p>
+            <p className="text-sm text-gray-600"> Charts powered by <a className="text-gray-600 opacity-85" href="http://tradingview.com/" target="_blank" rel="noopener noreferrer">Tradingview</a></p>
           </div>
         </div>
       </div>

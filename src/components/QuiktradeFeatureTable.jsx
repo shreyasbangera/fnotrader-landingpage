@@ -1,23 +1,23 @@
 import { Check, X } from "lucide-react";
 
 const QuikTradeFeatureTable = ({ features }) => (
-  <div className="bg-white rounded-xl shadow-xl overflow-hidden">
+  <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
     {/* Desktop Version */}
     <div className="hidden lg:flex lg:flex-col">
-      <div className="grid grid-cols-12 bg-gray-50 border-b border-gray-200 pr-[9px]">
-        <div className="col-span-6 p-6">
+      <div className="grid grid-cols-12 bg-gray-50 border-b border-gray-200">
+        <div className="col-span-6 p-6 border-r border-gray-200">
           <h3 className="text-lg font-semibold text-gray-900">Features</h3>
         </div>
-        <div className="col-span-3 p-6 text-center border-l border-gray-200">
+        <div className="col-span-3 p-6 text-center border-r border-gray-200">
           <h3 className="text-lg font-semibold text-gray-900">QuikTrade Scalper</h3>
         </div>
-        <div className="col-span-3 p-6 text-center border-l border-gray-200">
+        <div className="col-span-3 p-6 text-center">
           <h3 className="text-lg font-semibold text-gray-900">QuikTrade Pro</h3>
         </div>
       </div>
 
       {/* Scrollable Content */}
-      <div className="max-h-[33rem] overflow-y-auto pricing-scrollbar">
+      <div>
         {features.map((feature, index) => (
           <div
             key={feature.name}

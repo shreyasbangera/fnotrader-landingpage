@@ -1,37 +1,34 @@
 import { Check, X } from "lucide-react";
 
 const DiscoverFeatureTable = ({ features }) => (
-    <div className="bg-white rounded-xl shadow-xl overflow-hidden">
+    <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
     <div className="hidden lg:flex lg:flex-col">
       {/* Desktop Header */}
-      <div className="hidden lg:grid lg:grid-cols-12 bg-gray-50 border-b border-gray-200 pr-[9px]">
-        <div className="lg:col-span-4 p-6">
+      <div className="hidden lg:grid lg:grid-cols-9 bg-gray-50 border-b border-gray-200">
+        <div className="lg:col-span-3 p-6 border-r border-gray-200">
           <h3 className="text-lg font-semibold text-gray-900">Features</h3>
         </div>
-        <div className="lg:col-span-2 p-6 text-center border-l border-gray-200">
+        <div className="lg:col-span-2 p-6 text-center border-r border-gray-200">
           <h3 className="text-lg font-semibold text-gray-900">Starter</h3>
         </div>
-        <div className="lg:col-span-3 p-6 text-center border-l border-gray-200">
+        <div className="lg:col-span-2 p-6 text-center border-r border-gray-200">
           <h3 className="text-lg font-semibold text-gray-900">Sixer</h3>
         </div>
-        <div className="lg:col-span-3 p-6 text-center border-l border-gray-200">
+        <div className="lg:col-span-2 p-6 text-center">
           <h3 className="text-lg font-semibold text-gray-900">Pro</h3>
         </div>
       </div>
 
-      <div className="max-h-[35rem] overflow-y-auto pricing-scrollbar">
+      <div>
         {features.map((feature, index) => (
           <div
             key={feature.name}
-            className={`grid grid-cols-12 ${
+            className={`grid grid-cols-9 ${
               index % 2 === 0 ? 'bg-white' : 'bg-gray-50'
             } hover:bg-gray-100 transition-colors`}
           >
-            <div className="col-span-4 p-6 border-r border-gray-200">
+            <div className="col-span-3 p-6 border-r border-gray-200">
               <h4 className="font-medium text-gray-900">{feature.name}</h4>
-              {feature.description && (
-                <p className="text-sm text-gray-500 mt-1">{feature.description}</p>
-              )}
             </div>
             <div className="col-span-2 p-6 flex items-center justify-center border-r border-gray-200">
               {feature.isText ? (
@@ -46,7 +43,7 @@ const DiscoverFeatureTable = ({ features }) => (
                 </>
               )}
             </div>
-            <div className="col-span-3 p-6 flex items-center justify-center border-r border-gray-200">
+            <div className="col-span-2 p-6 flex items-center justify-center border-r border-gray-200">
               {feature.isText ? (
                 <span className="text-gray-700">{feature.sixer}</span>
               ) : (
@@ -59,7 +56,7 @@ const DiscoverFeatureTable = ({ features }) => (
                 </>
               )}
             </div>
-            <div className="col-span-3 p-6 flex items-center justify-center">
+            <div className="col-span-2 p-6 flex items-center justify-center">
               {feature.isText ? (
                 <span className="text-gray-700">{feature.pro}</span>
               ) : (

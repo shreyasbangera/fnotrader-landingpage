@@ -320,13 +320,13 @@ const Home = () => {
       <Feature
         features={discoverFeatures}
         title="Discover"
-        subtitle="Gain an edge with our advanced trading tools and analytics"
+        subtitle="Advanced Insights for smarter trading"
         theme="blue"
       />
       <Feature
         features={quiktradeFeatures}
         title="Quiktrade"
-        subtitle="Gain an edge with our advanced trading tools and analytics"
+        subtitle="Execute Trades with Precision"
         theme="white"
       />
       {/* <Products /> */}
