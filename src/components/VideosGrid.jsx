@@ -69,7 +69,7 @@ const VideoGrid = ({ videos }) => {
                 )}
               </div>
             </div>
-            <div className="p-6">
+            <div className="p-4">
               <h3 className="font-medium leading-relaxed mb-2">
                 {item.type === "youtube"
                   ? titles[item.src] || "Loading..."

@@ -118,13 +118,13 @@ const Feature = ({features, title, subtitle, theme}) => {
                   {activeImages[currentImageIndex]?.title}
                 </h3>
               </div>
-              <div className="flex-grow">
+              <div className="flex-grow flex items-center">
                 <img
                   onClick={openModal}
                   onLoad={() => setIsImageLoaded(true)}
                   src={activeImages[currentImageIndex]?.file || "/placeholder.svg"}
                   alt={activeImages[currentImageIndex]?.title}
-                  className={`w-full p-2 lg:mt-14  shadow-lg cursor-pointer object-contain rounded-lg transition-opacity duration-300 ${
+                  className={`w-full p-2 shadow-lg cursor-pointer object-contain rounded-lg transition-opacity duration-300 ${
                     isImageLoaded ? "opacity-100" : "opacity-0"
                   }`}
                 />
