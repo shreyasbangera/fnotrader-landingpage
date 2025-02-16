@@ -32,9 +32,9 @@ const Faq = () => {
 
   return (
     <section id="faq" className="bg-blue-50 py-12 lg:py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         <div className="text-center lg:mb-16 mb-12">
-          <h2 className="text-3xl lg:text-4xl font-semibold text-gray-900 lg:mb-4 mb-2">Frequently asked questions</h2>
+          <h2 className="text-2xl lg:text-4xl font-semibold text-gray-900 lg:mb-4 mb-2">Frequently asked questions</h2>
           <p className="text-base lg:text-lg text-gray-600">Got questions? We've got answers</p>
         </div>
 
@@ -46,7 +46,7 @@ const Faq = () => {
                 onClick={() => toggleFaq(index)}
               >
                 <div className="flex items-center justify-between">
-                  <span className="text-lg font-medium text-gray-900">{faq.question}</span>
+                  <span className="lg:text-lg font-medium text-gray-900">{faq.question}</span>
                   <svg
                     className={`w-5 h-5 text-gray-500 transform transition-transform duration-200 ${openIndex === index ? "rotate-45" : ""}`}
                     fill="none"
@@ -59,7 +59,7 @@ const Faq = () => {
               </button>
               {openIndex === index && (
                 <div className="faq-answer px-6 pb-4">
-                  <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                  <p className="text-gray-600 text-sm lg:text-base leading-relaxed">{faq.answer}</p>
                 </div>
               )}
             </div>

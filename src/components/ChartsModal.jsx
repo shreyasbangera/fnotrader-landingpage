@@ -14,7 +14,7 @@ const ChartsModal = ({ isOpen, onClose, imageUrl, imageTitle }) => {
           </button>
         </div>
         <div className="p-4">
-          <img src={imageUrl || "/placeholder.svg"} alt={imageTitle} className="w-full h-auto max-h-[70vh] object-contain" />
+          <img src={imageUrl || "/placeholder.svg"} alt={imageTitle} className="w-full h-auto max-h-[70vh] object-contain rounded-lg" />
         </div>
       </div>
     </div>

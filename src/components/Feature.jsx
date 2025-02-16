@@ -57,14 +57,14 @@ const Feature = ({features, title, subtitle, theme}) => {
 
   return (
     <section id={title.toLowerCase()} className={`py-12 lg:py-20 ${themeClasses[theme].background}`}>
-    <div className="max-w-7xl mx-auto">
+    <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
       <div className="text-center lg:mb-16 mb-12">
-        <h2 className={`text-3xl lg:text-4xl font-semibold ${themeClasses[theme].text} lg:mb-4 mb-2`}>{title}</h2>
+        <h2 className={`text-2xl lg:text-4xl font-semibold ${themeClasses[theme].text} lg:mb-4 mb-2`}>{title}</h2>
         <p className={`text-base lg:text-lg ${theme === "blue" ? "text-gray-100" : "text-gray-600"}`}>{subtitle}</p>
       </div>
-      <div className="flex flex-col lg:flex-row px-4 sm:px-6 lg:px-8 items-center gap-8 lg:gap-0 lg:justify-between">
+      <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-0 lg:justify-between">
         {/* Left sidebar with features */}
-        <div className={`w-full lg:max-w-sm overflow-y-auto max-h-[36.5rem] ${theme === "blue" ? "lg:discover-scrollbar" : "lg:quiktrade-scrollbar"}`}>
+        <div className={`w-full lg:max-w-sm overflow-y-auto max-h-[24rem] sm:max-h-[19rem] lg:max-h-[36.5rem] ${theme === "blue" ? "lg:discover-scrollbar" : "lg:quiktrade-scrollbar"}`}>
         <div className="lg:pr-3 pb-2 space-y-3">
         {/* <div> */}
           {features.map((section) => (
@@ -108,18 +108,23 @@ const Feature = ({features, title, subtitle, theme}) => {
 
         {/* Right side image */}
         <div className="max-w-3xl w-full">
-          <div className={`bg-white rounded-xl shadow-lg border ${theme === "blue" ? "border-white" : "border-neutral-200"} h-full relative `}>
-            {activeImages.length > 0 && (
-              <div className="lg:px-16 py-8 px-6 lg:h-[464px] xl:h-[504px] h-[394px] sm:h-[529px] min-w-[250px]">
-                <h3 className="text-lg lg:text-xl text-gray-900 font-medium text-center pb-4">
+        <div
+          className={`bg-white rounded-xl shadow-lg border ${theme === "blue" ? "border-white" : "border-neutral-200"} h-full relative`}
+        >
+          {activeImages.length > 0 && (
+            <div className="lg:px-16 py-6 lg:py-8 px-6 lg:h-[36.5rem] h-[394px] sm:h-[529px] min-w-[250px] flex flex-col">
+              <div className="-mx-6 lg:-mx-16 px-6 lg:px-16 pb-4 border-b border-gray-200 relative">
+                <h3 className="text-lg lg:text-xl text-gray-900 font-medium text-center">
                   {activeImages[currentImageIndex]?.title}
                 </h3>
+              </div>
+              <div className="flex-grow">
                 <img
                   onClick={openModal}
                   onLoad={() => setIsImageLoaded(true)}
                   src={activeImages[currentImageIndex]?.file || "/placeholder.svg"}
                   alt={activeImages[currentImageIndex]?.title}
-                  className={`w-full p-2 shadow-lg cursor-pointer object-contain rounded-lg transition-opacity duration-300 ${
+                  className={`w-full p-2 lg:mt-14  shadow-lg cursor-pointer object-contain rounded-lg transition-opacity duration-300 ${
                     isImageLoaded ? "opacity-100" : "opacity-0"
                   }`}
                 />
@@ -140,14 +145,15 @@ const Feature = ({features, title, subtitle, theme}) => {
                     </button>
                   </>
                 )}
-                <p className="absolute bottom-8 lg:left-16 left-6 lg:right-16 right-6 text-gray-900 text-sm leading-6">
-                  {activeImages[currentImageIndex]?.description}
-                </p>
               </div>
-            )}
-          </div>
+              <div className="-mx-6 lg:-mx-16 px-6 lg:px-16 pt-4 border-t border-gray-200">
+                <p className="text-gray-900 text-sm leading-6">{activeImages[currentImageIndex]?.description}</p>
+              </div>
+            </div>
+          )}
         </div>
       </div>
+    </div>
     </div>
     <ChartsModal
       isOpen={isModalOpen}

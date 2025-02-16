@@ -62,10 +62,10 @@ const Integration = () => {
 
   return (
     <div className="py-4 lg:py-8 w-full">
-      <h2 className="text-xl lg:text-2xl text-gray-900 font-semibold lg:mb-16 mb-12 text-center">
+      <h2 className="text-xl lg:text-2xl text-gray-900 font-medium lg:mb-16 mb-12 text-center">
       Integrates with leading brokers
       </h2>
-      <div className="relative flex overflow-x-hidden">
+      <div className="hidden relative md:flex overflow-x-hidden">
         <div className="animate-marquee flex gap-8 pr-8 items-center">
           {partners?.map((partner, index) => (
             <div 
@@ -94,6 +94,20 @@ const Integration = () => {
             </div>
           ))}
         </div>
+      </div>
+      <div className='grid grid-cols-2 gap-4 md:hidden'>
+      {partners?.map((partner, index) => (
+            <div 
+              key={index}
+              className="flex items-center justify-center bg-white rounded-xl p-6 shadow-sm"
+            >
+              <img 
+                src={partner.logo} 
+                alt={partner.name}
+                className="w-24 object-contain"
+              />
+            </div>
+          ))}
       </div>
     </div>
   )

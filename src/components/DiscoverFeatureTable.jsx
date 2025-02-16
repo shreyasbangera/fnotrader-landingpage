@@ -6,16 +6,16 @@ const DiscoverFeatureTable = ({ features }) => (
       {/* Desktop Header */}
       <div className="hidden lg:grid lg:grid-cols-9 bg-gray-50 border-b border-gray-200">
         <div className="lg:col-span-3 p-6 border-r border-gray-200">
-          <h3 className="text-lg font-semibold text-gray-900">Features</h3>
+          <h3 className="text-lg font-medium text-gray-900">Features</h3>
         </div>
         <div className="lg:col-span-2 p-6 text-center border-r border-gray-200">
-          <h3 className="text-lg font-semibold text-gray-900">Starter</h3>
+          <h3 className="text-lg font-medium text-gray-900">Starter</h3>
         </div>
         <div className="lg:col-span-2 p-6 text-center border-r border-gray-200">
-          <h3 className="text-lg font-semibold text-gray-900">Sixer</h3>
+          <h3 className="text-lg font-medium text-gray-900">Sixer</h3>
         </div>
         <div className="lg:col-span-2 p-6 text-center">
-          <h3 className="text-lg font-semibold text-gray-900">Pro</h3>
+          <h3 className="text-lg font-medium text-gray-900">Pro</h3>
         </div>
       </div>
 
@@ -28,7 +28,7 @@ const DiscoverFeatureTable = ({ features }) => (
             } hover:bg-gray-100 transition-colors`}
           >
             <div className="col-span-3 p-6 border-r border-gray-200">
-              <h4 className="font-medium text-gray-900">{feature.name}</h4>
+              <h4 className="text-gray-900">{feature.name}</h4>
             </div>
             <div className="col-span-2 p-6 flex items-center justify-center border-r border-gray-200">
               {feature.isText ? (
@@ -77,11 +77,11 @@ const DiscoverFeatureTable = ({ features }) => (
       {/* Mobile Version */}
       <div className="lg:hidden flex flex-col">
       {/* Scrollable Content */}
-      <div className="max-h-[28rem] overflow-y-auto">
+      <div>
         {features.map((feature, index) => (
           <div key={feature.name} className="border-b border-gray-200 last:border-b-0">
             <div className="p-4 bg-gray-50">
-              <h4 className="font-medium text-gray-900">{feature.name}</h4>
+              <h4 className="text-gray-900">{feature.name}</h4>
               {feature.description && (
                 <p className="text-sm text-gray-500 mt-1">{feature.description}</p>
               )}
@@ -90,7 +90,7 @@ const DiscoverFeatureTable = ({ features }) => (
               <div className="p-4 text-center">
                 <p className="text-sm text-gray-500 mb-2">Starter</p>
                 {feature.isText ? (
-                  <span className="text-gray-700">{feature.starter}</span>
+                  <span className="text-gray-700 text-sm">{feature.starter}</span>
                 ) : (
                   <div className="flex justify-center">
                     {feature.starter ? (
@@ -104,7 +104,7 @@ const DiscoverFeatureTable = ({ features }) => (
               <div className="p-4 text-center">
                 <p className="text-sm text-gray-500 mb-2">Sixer</p>
                 {feature.isText ? (
-                  <span className="text-gray-700">{feature.sixer}</span>
+                  <span className="text-gray-700 text-sm">{feature.sixer}</span>
                 ) : (
                   <div className="flex justify-center">
                     {feature.sixer ? (
@@ -118,7 +118,7 @@ const DiscoverFeatureTable = ({ features }) => (
               <div className="p-4 text-center">
                 <p className="text-sm text-gray-500 mb-2">Pro</p>
                 {feature.isText ? (
-                  <span className="text-gray-700">{feature.pro}</span>
+                  <span className="text-gray-700 text-sm">{feature.pro}</span>
                 ) : (
                   <div className="flex justify-center">
                     {feature.pro ? (

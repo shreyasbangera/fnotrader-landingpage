@@ -11,7 +11,7 @@ const Policy = () => {
           <p className="text-gray-600 leading-relaxed">
           Sukrisa Technologies LLP (the “Company”) is committed to maintaining robust privacy protections for its users. Our Privacy Policy (“Privacy Policy”) is designed to help you understand how we collect, use and safeguard the information you provide to us and to assist you in making informed decisions when using our Service.
           </p>
-          <p className="text-gray-600 leading-relaxed">For purposes of this Agreement, “Site” refers to the Company’s website, which can be accessed at www.fnotrader.com and www.sukrisatech.com</p>
+          <p className="text-gray-600 leading-relaxed">For purposes of this Agreement, “Site” refers to the Company’s website, which can be accessed at www.fnotrader.com</p>
           <p className="text-gray-600 leading-relaxed">“Service” refers to the Company’s services accessed via the Site or App, in which users can view data analytics about specific Stock Markets in India.</p>
           <p className="text-gray-600 leading-relaxed">The terms “Company”, “we”, “us”, “our” and “ours” refer to the Company, Sukrisa Technologies LLP.</p>
           <p className="text-gray-600 leading-relaxed">“You” refers to you, as a user of our Site or our Service.</p>
