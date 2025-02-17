@@ -3,6 +3,14 @@ import { AlertTriangle } from 'lucide-react';
 import DataTable  from '../components/DataTable';
 
 const formatPercentage = (value) => `${value.toFixed(2)}%`;
+const formatDate = (date) => {
+    return date.toLocaleDateString('en-US', {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+  };
 
 const banListColumns = [
   { header: 'Symbol', accessor: 'nseSymbol' },
@@ -86,6 +94,7 @@ function BanList() {
   return (
     <div className="min-h-screen bg-gray-100 p-6">
       <div className="max-w-7xl mx-auto space-y-6">        
+        <h3 className="text-lg font-semibold text-blue-600">{formatDate(new Date())}</h3>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <DataTable
             data={data?.data?.banList || []}
