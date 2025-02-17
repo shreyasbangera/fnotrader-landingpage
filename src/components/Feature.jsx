@@ -132,12 +132,14 @@ const Feature = ({features, title, subtitle, theme}) => {
                 {activeImages.length > 1 && (
                   <>
                     <button
+                      aria-label="Previous slide"
                       onClick={prevImage}
                       className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 rounded-full p-2 shadow-lg hover:bg-white transition-all duration-200 group"
                     >
                       <ChevronLeft className="w-6 h-6 text-gray-600 group-hover:text-blue-600" />
                     </button>
                     <button
+                      aria-label="Next slide"
                       onClick={nextImage}
                       className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/80 rounded-full p-2 shadow-lg hover:bg-white transition-all duration-200 group"
                     >

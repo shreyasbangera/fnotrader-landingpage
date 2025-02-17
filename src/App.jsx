@@ -16,7 +16,7 @@ import HolidayList from './pages/HolidayList'
 function App() {
 
   return (
-    <div className='font-inter'>
+    <div className='font-poppins'>
     <Header />
     <Routes>
     <Route path="/" element={<Home />} />
