@@ -10,6 +10,8 @@ import TermsCondition from './pages/TermsCondition'
 import Policy from './pages/Policy'
 import RefundPolicy from './pages/RefundPolicy'
 import AboutUs from './pages/AboutUs'
+import BanList from './pages/BanList'
+import HolidayList from './pages/HolidayList'
 
 function App() {
 
@@ -25,6 +27,8 @@ function App() {
     <Route path="/privacy-policy" element={<Policy />} />
     <Route path="/refund-policy" element={<RefundPolicy />} />
     <Route path="/about-us" element={<AboutUs />} />
+    <Route path="/ban-list" element={<BanList />} />
+    <Route path="/holiday-list" element={<HolidayList />} />
     </Routes>
     <Footer /> 
     </div>
