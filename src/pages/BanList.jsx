@@ -106,7 +106,7 @@ function BanList() {
           <DataTable
             data={data?.data?.entrantsList || []}
             columns={banListColumns}
-            title="Posiible Entrants"
+            title="Possible Entrants"
             className="lg:col-span-1"
           />
           
